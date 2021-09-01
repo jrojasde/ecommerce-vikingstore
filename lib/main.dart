@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:viking_store/src/login/login_page.dart';
+import 'package:viking_store/src/utils/my_colors.dart';
 
 
 void main() {
@@ -25,6 +26,9 @@ class  _MyAppState extends State<MyApp> {
       routes:  {
         'login': (BuildContext context) => LoginPage()
       },
+      theme: ThemeData(
+        primaryColor: MyColors.primaryColor
+      ),
     );
   }
 }
