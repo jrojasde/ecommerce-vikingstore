@@ -46,9 +46,25 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _textFielPassword(){
-    return   TextField(
-      decoration: InputDecoration(
-          hintText: 'Contraseña'
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
+      decoration: BoxDecoration(
+          color: MyColors.primaryOpacityColor,
+          borderRadius: BorderRadius.circular(30)
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+            hintText: 'Contraseña',
+            border: InputBorder.none,
+            contentPadding: EdgeInsets.all(15),
+            hintStyle: TextStyle(
+                color: MyColors.primaryColorDark
+            ),
+            prefixIcon: Icon(
+              Icons.lock,
+              color: MyColors.primaryColor,
+            )
+        ),
       ),
     );
   }
@@ -78,13 +94,23 @@ class _LoginPageState extends State<LoginPage> {
 
   Widget _textFieldEmail(){
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 50),
+      margin: EdgeInsets.symmetric(horizontal: 50, vertical: 5),
       decoration: BoxDecoration(
-        color: MyColors.primaryOpacityColor
+        color: MyColors.primaryOpacityColor,
+        borderRadius: BorderRadius.circular(30)
       ),
       child: TextField(
         decoration: InputDecoration(
-            hintText: 'Correo Electronico'
+            hintText: 'Correo Electronico',
+            border: InputBorder.none,
+          contentPadding: EdgeInsets.all(15),
+          hintStyle: TextStyle(
+            color: MyColors.primaryColorDark
+          ),
+          prefixIcon: Icon(
+              Icons.email,
+            color: MyColors.primaryColor,
+          )
         ),
       ),
     );
